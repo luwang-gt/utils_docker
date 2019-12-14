@@ -1,0 +1,13 @@
+version: "3"
+services:
+  util_docker:
+    image: base_img
+    container_name: util_docker
+    ports:
+     - "5000:5000"
+    environment:
+     - DATADOG_HOST=datadog
+    tty: true
+    volumes:
+     - /Users/luwang/workdir/docker:/docker
+    entrypoint: "/bin/bash"
